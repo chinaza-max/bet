@@ -1,0 +1,100 @@
+$navBackground:#0139DD;
+$navbackgroundFade:#0E4CFF;
+$minWidth:290px;
+#nav{
+    width: 100%;
+}
+#nav__container1{
+    padding-top: 10px;
+    background-color:$navBackground;
+    #nav__container1__content{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        height: 37px;
+        justify-content: space-between;
+        #nav__container1__content__logo{
+            width: 100px;
+            font-size: 20px;
+        }
+        #nav__container1__content__account{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                width: 200px;
+                justify-content: right; 
+            div{
+                border-left: 1px solid black;
+                padding-left: 15px;
+                padding-right: 30px;
+                height: 25px;
+            }
+            div .Link{
+                text-decoration: none;
+                color: white;
+                line-height: 20px;
+            }
+        }
+    }
+}
+#nav__container2{
+    width: 100%;
+    margin-top: 10px;
+    #nav__container2__row2Nav{
+        list-style: none;
+        display: flex;
+        margin: 0 auto;
+        width: 50%;
+        justify-content: space-evenly;
+        height: 30px;
+        li{
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        li .Link{
+            text-decoration: none;
+            padding: 5px 8px 5px 8px;
+            span{
+                position: absolute;
+                width: 0;
+                transition: width 1s, height 3s;
+                background-color:$navBackground;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                border-top-left-radius: 12px;
+                border-top-right-radius: 12px;
+            }
+            #active{
+                height: 4px;
+                width: 100%;
+            }
+        }
+        li:hover .Link span{
+            height: 4px;
+            width: 100%;
+            background-color:$navbackgroundFade ;
+        }
+        
+    }
+}
+@media(max-width:700px) {
+    #nav__container2{
+        overflow-x: scroll;
+        width: 100%;
+        overflow-y: hidden;
+        #nav__container2__row2Nav{
+            width: fit-content;
+            min-width: $minWidth;
+            li:nth-child(1){
+               display: none;
+            }
+            li:nth-child(7){
+                display: none;
+             }
+        }
+    }
+}

@@ -1,0 +1,132 @@
+#nav {
+  width: 100%;
+}
+
+#nav__container1 {
+  padding-top: 10px;
+  background-color: #0139DD;
+}
+
+#nav__container1 #nav__container1__content {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  list-style: none;
+  height: 37px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#nav__container1 #nav__container1__content #nav__container1__content__logo {
+  width: 100px;
+  font-size: 20px;
+}
+
+#nav__container1 #nav__container1__content #nav__container1__content__account {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 200px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+#nav__container1 #nav__container1__content #nav__container1__content__account div {
+  border-left: 1px solid black;
+  padding-left: 15px;
+  padding-right: 30px;
+  height: 25px;
+}
+
+#nav__container1 #nav__container1__content #nav__container1__content__account div .Link {
+  text-decoration: none;
+  color: white;
+  line-height: 20px;
+}
+
+#nav__container2 {
+  width: 100%;
+  margin-top: 10px;
+}
+
+#nav__container2 #nav__container2__row2Nav {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 50%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 30px;
+}
+
+#nav__container2 #nav__container2__row2Nav li {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link {
+  text-decoration: none;
+  padding: 5px 8px 5px 8px;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link span {
+  position: absolute;
+  width: 0;
+  -webkit-transition: width 1s, height 3s;
+  transition: width 1s, height 3s;
+  background-color: #0139DD;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link #active {
+  height: 4px;
+  width: 100%;
+}
+
+#nav__container2 #nav__container2__row2Nav li:hover .Link span {
+  height: 4px;
+  width: 100%;
+  background-color: #0E4CFF;
+}
+
+@media (max-width: 700px) {
+  #nav__container2 {
+    overflow-x: scroll;
+    width: 100%;
+    overflow-y: hidden;
+  }
+  #nav__container2 #nav__container2__row2Nav {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    min-width: 290px;
+  }
+  #nav__container2 #nav__container2__row2Nav li:nth-child(1) {
+    display: none;
+  }
+  #nav__container2 #nav__container2__row2Nav li:nth-child(7) {
+    display: none;
+  }
+}
+/*# sourceMappingURL=homeNav.css.map */
