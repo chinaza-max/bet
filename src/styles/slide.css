@@ -1,0 +1,95 @@
+.slideConatiner {
+  width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.slideConatiner .slideConatiner__left:hover {
+  cursor: pointer;
+  color: #0139DD;
+}
+
+.slideConatiner .slideConatiner__right:hover {
+  cursor: pointer;
+  color: #0139DD;
+}
+
+.slideConatiner .slideConatiner__left {
+  position: absolute;
+  top: 75px;
+  left: 10px;
+  -webkit-transform: translateY(4px) rotateZ(180deg);
+          transform: translateY(4px) rotateZ(180deg);
+}
+
+.slideConatiner .slideConatiner__right {
+  position: absolute;
+  top: 75px;
+  right: 15px;
+}
+
+.slideConatiner .slideConatiner__container {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: row;
+      -ms-flex-pack: row;
+          justify-content: row;
+  width: 300%;
+  position: absolute;
+}
+
+.slideConatiner .slideConatiner__container .slideConatiner__container__items {
+  width: 100%;
+}
+
+.slideConatiner .slideConatiner__container .slideConatiner__container__items img {
+  width: 100%;
+  height: 50%;
+}
+
+.slideConatiner .slideConatiner__containerDOT {
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  text-align: center;
+}
+
+.slideConatiner .slideConatiner__containerDOT .slideConatiner__container__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  margin: 0 6px;
+  background-color: #fff;
+  display: inline-block;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  border: 1px solid black;
+}
+
+.slideConatiner .slideConatiner__containerDOT .slideConatiner__container__dot:hover {
+  background-color: #0139DD !important;
+  border: 2px solid #fff;
+}
+
+.slideConatiner .slideConatiner__containerDOT .dot-active {
+  background-color: #0139DD !important;
+  border: 2px solid #fff;
+}
+
+@media (max-width: 604px) {
+  .slideConatiner {
+    width: 100%;
+    height: 140px;
+  }
+  .slideConatiner .slideConatiner__left {
+    top: 50px;
+  }
+  .slideConatiner .slideConatiner__right {
+    top: 50px;
+  }
+}
+/*# sourceMappingURL=slide.css.map */

@@ -4,6 +4,14 @@ import "../../../styles/navStyle/homeNav.css"
 
 
 function HomeNav(){
+    function selectedNav(position){
+        let span=document.querySelectorAll('.span')
+        for(let i=0; i<span.length; i++){
+            const element=span[i];
+            element.classList.remove("active")
+        }
+        span[position].classList.add("active")
+    }
     return(
         <nav id="nav">
             <div id="nav__container1">
@@ -18,13 +26,13 @@ function HomeNav(){
 
             <div id="nav__container2">
                 <ul id="nav__container2__row2Nav">
-                    <li><Link to="#" className="Link">Home <span id="active"></span></Link></li>
-                    <li><Link to="#" className="Link">Live <span></span></Link></li>
-                    <li><Link to="#" className="Link">League <span></span></Link></li>
-                    <li><Link to="#" className="Link">LiveScore <span></span></Link></li>
-                    <li><Link to="#" className="Link">Blog <span></span></Link></li>
-                    <li><Link to="#" className="Link">Fixture <span></span></Link></li>
-                    <li><Link to="#" className="Link">Profile <span></span></Link></li>
+                    <li><Link to="#" onClick={()=>selectedNav(0)} className="Link" >Home <span className="span  active"></span></Link></li>
+                    <li><Link to="#" onClick={()=>selectedNav(1)} className="Link" >Live <span className="span" ></span></Link></li>
+                    <li><Link to="#" onClick={()=>selectedNav(2)} className="Link">League <span className="span" ></span></Link></li>
+                    <li><Link to="#" onClick={()=>selectedNav(3)} className="Link">LiveScore <span className="span"></span></Link></li>
+                    <li><Link to="#" onClick={()=>selectedNav(4)} className="Link">Blog <span className="span"></span></Link></li>
+                    <li><Link to="#" onClick={()=>selectedNav(5)} className="Link">Fixture <span className="span"></span></Link></li>
+                    <li><Link to="#" onClick={()=>selectedNav(6)} className="Link">Profile <span className="span"></span></Link></li>
                 </ul>
             </div>
         </nav>

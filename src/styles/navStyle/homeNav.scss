@@ -54,6 +54,9 @@ $minWidth:290px;
             padding: 0;
             position: relative;
         }
+        li .Link:hover{
+            color:$navbackgroundFade;
+        }
         li .Link{
             text-decoration: none;
             padding: 5px 8px 5px 8px;
@@ -68,7 +71,7 @@ $minWidth:290px;
                 border-top-left-radius: 12px;
                 border-top-right-radius: 12px;
             }
-            #active{
+            .active{
                 height: 4px;
                 width: 100%;
             }
