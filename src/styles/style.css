@@ -16,8 +16,9 @@
 }
 
 #HomeContainer__slide {
-  margin-top: 10px;
+  margin-top: 3px;
   width: 100%;
   height: 180px;
+  min-width: 290px;
 }
 /*# sourceMappingURL=style.css.map */

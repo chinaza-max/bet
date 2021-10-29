@@ -29,10 +29,10 @@
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
-    color: #3662e7;
+    color: #587ff5;
   }
   .bottomNav li .active {
-    color: #012baa;
+    color: #072fa8;
   }
 }
 /*# sourceMappingURL=bottomNav.css.map */

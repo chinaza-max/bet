@@ -1,5 +1,6 @@
 #nav {
   width: 100%;
+  min-width: 290px;
 }
 
 #nav__container1 {
@@ -22,6 +23,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  min-width: 290px;
 }
 
 #nav__container1 #nav__container1__content #nav__container1__content__logo {
@@ -69,6 +71,7 @@
   display: flex;
   margin: 0 auto;
   width: 50%;
+  min-width: 420px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -114,6 +117,31 @@
   background-color: #0E4CFF;
 }
 
+@media (max-width: 1024px) {
+  #nav__container1 #nav__container1__content {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+    width: 100%;
+  }
+  #nav__container1 #nav__container1__content li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  #nav__container1 #nav__container1__content #nav__container1__content__logo {
+    padding-left: 10px;
+  }
+  #nav__container1 #nav__container1__content #nav__container1__content__account {
+    width: 200px;
+  }
+  #nav__container1 #nav__container1__content #nav__container1__content__account div {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 25px;
+  }
+}
+
 @media (max-width: 700px) {
   #nav__container2 {
     overflow-x: scroll;
@@ -121,9 +149,7 @@
     overflow-y: hidden;
   }
   #nav__container2 #nav__container2__row2Nav {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
     min-width: 290px;
   }
   #nav__container2 #nav__container2__row2Nav li:nth-child(1) {

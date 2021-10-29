@@ -1,5 +1,5 @@
 $navBackground:#0139DD;
-
+$minWidth:290px;
 
 .slideConatiner{
     width: 600px;
@@ -7,6 +7,7 @@ $navBackground:#0139DD;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    min-width:$minWidth ;
     .slideConatiner__left:hover{
         cursor: pointer;
         color: $navBackground;
@@ -32,6 +33,7 @@ $navBackground:#0139DD;
         justify-content: row;
         width: 300%;
         position: absolute;
+        min-width:$minWidth ;
         .slideConatiner__container__items{
             width: 100%;
             img{
@@ -70,7 +72,7 @@ $navBackground:#0139DD;
 @media (max-width:604px) {
     .slideConatiner{
         width: 100%;
-        height: 140px;
+        height: 130px;
         .slideConatiner__left{
             top: 50px;
         }

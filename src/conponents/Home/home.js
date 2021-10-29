@@ -3,9 +3,9 @@ import HomeNav from "./Navs/homeNav";
 import BottomNav from "./Navs/bottomNav";
 import "../../styles/style.css";
 import Slide from "../Home/slides"
-//import {useParams} from "react-router-dom";
+import images from "../imagesForSlide"
 
-function Home(props){
+function Home(){
    
     return(
         <div id="HomeContainer">
@@ -13,7 +13,7 @@ function Home(props){
                <HomeNav/>
            </div>
            <div  id="HomeContainer__slide">
-                <Slide/>
+                <Slide imageP={images}/>
            </div>
           <BottomNav/>
         </div>

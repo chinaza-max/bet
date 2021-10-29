@@ -4,6 +4,7 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  min-width: 290px;
 }
 
 .slideConatiner .slideConatiner__left:hover {
@@ -40,6 +41,7 @@
           justify-content: row;
   width: 300%;
   position: absolute;
+  min-width: 290px;
 }
 
 .slideConatiner .slideConatiner__container .slideConatiner__container__items {
@@ -83,7 +85,7 @@
 @media (max-width: 604px) {
   .slideConatiner {
     width: 100%;
-    height: 140px;
+    height: 130px;
   }
   .slideConatiner .slideConatiner__left {
     top: 50px;
