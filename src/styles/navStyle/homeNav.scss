@@ -1,13 +1,15 @@
 $navBackground:#0139DD;
 $navbackgroundFade:#0E4CFF;
-$minWidth:290px;
+$minWidth:310px;
+
 #nav{
     width: 100%;
-    min-width:$minWidth ;
+    min-width:$minWidth;
 }
 #nav__container1{
     padding-top: 10px;
     background-color:$navBackground;
+    min-width: none;
     #nav__container1__content{
         width: 90%;
         margin: 0 auto;
@@ -27,13 +29,13 @@ $minWidth:290px;
                 flex-direction: row;
                 width: 200px;
                 justify-content: right; 
-            div{
+            .nav__container1__content__account_container{
                 border-left: 1px solid black;
                 padding-left: 15px;
                 padding-right: 30px;
                 height: 25px;
             }
-            div .Link{
+            .nav__container1__content__account_container .Link{
                 text-decoration: none;
                 color: white;
                 line-height: 20px;
@@ -66,7 +68,7 @@ $minWidth:290px;
             span{
                 position: absolute;
                 width: 0;
-                transition: width 1s, height 3s;
+                transition: width 200ms, height 3s;
                 background-color:$navBackground;
                 bottom: 0px;
                 left: 0;
@@ -109,8 +111,6 @@ $minWidth:290px;
             }
         }
     }
-}
-@media(max-width:700px) {
     #nav__container2{
         overflow-x: scroll;
         width: 100%;
@@ -124,6 +124,20 @@ $minWidth:290px;
             li:nth-child(7){
                 display: none;
              }
+        }
+    }
+}
+@media(max-width:325px) {
+    #nav__container1{
+        #nav__container1__content{
+            #nav__container1__content__account{
+                .nav__container1__content__account_container{
+                    border-left: 1px solid black;
+                    padding-left: 10px;
+                    padding-right: 25px;
+                    height: 25px;
+                }
+            }
         }
     }
 }

@@ -1,0 +1,49 @@
+.amountConatainer{
+    height: 100%;
+    width: 105px;
+    position: relative;
+    input{
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 17px;
+        padding-left: 10px;
+        position: absolute;
+        top:2px
+    }
+    .amountConatainer__icon{
+        position:absolute;
+        left: 0;
+        font-size: 17px;
+    }
+    .amountConatainer__vi{
+        position: absolute;
+        right: 0;
+    }
+    .amountConatainer_load{
+        position: absolute;
+        right: -25px;
+        width: 22px;
+        height: 22px;
+    }
+    .refresh{
+        animation:load1 400ms  ease-in;
+    }
+    input:focus{
+        outline: none;
+    }
+    @keyframes load1{
+        from{ transform: rotate(0deg);}
+        to{ transform: rotate(-100deg);}
+    }
+}
+
+@media(max-width:412px){
+    .amountConatainer{
+        width: 80px;
+        input{
+            padding-left: 1px;
+        }
+    }
+}

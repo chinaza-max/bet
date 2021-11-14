@@ -1,9 +1,6 @@
 import "../../styles/slide.css"
 import {DoubleArrowIcon} from "../materialUI/icons"
 import {useEffect, useState } from 'react';
-import img1 from "../../images/football5.jfif";
-import img2 from "../../images/football3.jfif"
-import img3 from "../../images/football2.jfif"
 
 function Slide(props){
     const[position,setPosition]=useState("")
