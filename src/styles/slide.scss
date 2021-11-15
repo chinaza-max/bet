@@ -1,5 +1,5 @@
 $navBackground:#0139DD;
-$minWidth:290px;
+$minWidth:310px;
 
 .slideConatiner{
     width: 600px;
@@ -78,6 +78,13 @@ $minWidth:290px;
         }
         .slideConatiner__right{
             top:50px;
+        }
+    }
+}
+@media (max-width:320px) {
+    .slideConatiner{
+        .slideConatiner__containerDOT{
+            bottom :10%;
         }
     }
 }

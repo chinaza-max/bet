@@ -9,7 +9,6 @@ $minWidth:310px;
 #nav__container1{
     padding-top: 10px;
     background-color:$navBackground;
-    min-width: none;
     #nav__container1__content{
         width: 90%;
         margin: 0 auto;
@@ -27,13 +26,19 @@ $minWidth:310px;
                 list-style: none;
                 display: flex;
                 flex-direction: row;
-                width: 200px;
+                width: 220px;
                 justify-content: right; 
             .nav__container1__content__account_container{
                 border-left: 1px solid black;
                 padding-left: 15px;
-                padding-right: 30px;
+                padding-right: 0px;
                 height: 25px;
+            }
+            .nav__container1__content__account_container_1{
+                padding-right: 30px;
+            }
+            #nav__container1__content__account_container_1_id{
+                position: relative;
             }
             .nav__container1__content__account_container .Link{
                 text-decoration: none;
@@ -103,10 +108,13 @@ $minWidth:310px;
             }
             #nav__container1__content__account{
                 width: 200px;
-                div{
-                    padding-left: 15px;
-                    padding-right: 15px;
+                .nav__container1__content__account_container{
+                    padding-left: 20px;
+                    padding-right: 5px;
                     height: 25px;
+                }
+                .nav__container1__content__account_container_1{
+                    width: 130px;
                 }
             }
         }
@@ -127,7 +135,8 @@ $minWidth:310px;
         }
     }
 }
-@media(max-width:325px) {
+
+@media(max-width:420px) {
     #nav__container1{
         #nav__container1__content{
             #nav__container1__content__account{
@@ -137,6 +146,15 @@ $minWidth:310px;
                     padding-right: 25px;
                     height: 25px;
                 }
+                .nav__container1__content__account_container_2{
+                    padding-right:5px;
+                    padding-left:5px;
+                }
+                .nav__container1__content__account_container_1{
+                    padding-right: 100px;
+                    width: 190px;
+                }
+
             }
         }
     }

@@ -4,7 +4,7 @@
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  min-width: 290px;
+  min-width: 310px;
 }
 
 .slideConatiner .slideConatiner__left:hover {
@@ -41,7 +41,7 @@
           justify-content: row;
   width: 300%;
   position: absolute;
-  min-width: 290px;
+  min-width: 310px;
 }
 
 .slideConatiner .slideConatiner__container .slideConatiner__container__items {
@@ -92,6 +92,12 @@
   }
   .slideConatiner .slideConatiner__right {
     top: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  .slideConatiner .slideConatiner__containerDOT {
+    bottom: 10%;
   }
 }
 /*# sourceMappingURL=slide.css.map */

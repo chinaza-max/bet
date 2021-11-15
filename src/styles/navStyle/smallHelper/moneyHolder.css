@@ -1,36 +1,39 @@
 .amountConatainer {
   height: 100%;
   width: 105px;
-  position: relative;
 }
 
-.amountConatainer input {
-  width: 100%;
+.amountConatainer #password {
+  width: 100px;
   background-color: transparent;
   border: none;
   color: white;
   font-size: 17px;
-  padding-left: 10px;
+  padding-left: 1px;
   position: absolute;
   top: 2px;
+  padding-right: 4px;
 }
 
 .amountConatainer .amountConatainer__icon {
   position: absolute;
-  left: 0;
+  left: 2px;
   font-size: 17px;
+  padding-left: 4px;
 }
 
 .amountConatainer .amountConatainer__vi {
   position: absolute;
-  right: 0;
+  right: 32px;
+  padding-right: 4px;
 }
 
 .amountConatainer .amountConatainer_load {
   position: absolute;
-  right: -25px;
+  right: 5px;
   width: 22px;
   height: 22px;
+  padding-right: 4px;
 }
 
 .amountConatainer .refresh {
@@ -64,12 +67,25 @@
   }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 429px) {
   .amountConatainer {
-    width: 80px;
+    width: 90px;
+    display: inline;
   }
-  .amountConatainer input {
-    padding-left: 1px;
+  .amountConatainer #password {
+    padding-left: 7px;
+    width: 70px;
+  }
+  .amountConatainer .amountConatainer__vi {
+    padding-left: 5px;
+    position: absolute;
+    right: 24px;
+  }
+  .amountConatainer .amountConatainer_load {
+    right: 0px;
+  }
+  .amountConatainer .amountConatainer__icon {
+    top: 1px;
   }
 }
 /*# sourceMappingURL=moneyHolder.css.map */

@@ -19,13 +19,13 @@ function HomeNav(){
                     <li  id="nav__container1__content__logo"> BetRich</li>
                     {true?
                          <li id="nav__container1__content__account">
-                            <div className="nav__container1__content__account_container"><Link to="#" className="Link"><MoneyHolder/></Link></div>
-                            <div className="nav__container1__content__account_container"><Link to="#" className="Link">Logout</Link></div>
+                            <div className="nav__container1__content__account_container nav__container1__content__account_container_1" id="nav__container1__content__account_container_1_id"><Link to="#" className="Link"><MoneyHolder/></Link></div>
+                            <div className="nav__container1__content__account_container nav__container1__content__account_container_2" ><Link to="#" className="Link">Logout</Link></div>
                         </li>
                         :
                         <li id="nav__container1__content__account">
-                            <div className="nav__container1__content__account_container"><Link to="#" className="Link">Register</Link></div>
-                            <div className="nav__container1__content__account_container"><Link to="#" className="Link">Login</Link></div>
+                            <div className="nav__container1__content__account_container nav__container1__content__account_container_1"><Link to="#" className="Link">Register</Link></div>
+                            <div className="nav__container1__content__account_container nav__container1__content__account_container_2"><Link to="#" className="Link">Login</Link></div>
                         </li>
                     }
                    
