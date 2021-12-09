@@ -1,6 +1,10 @@
 #nav {
-  width: 100%;
+  width: 100vw;
   min-width: 310px;
+  border-bottom: 1px solid #0139DD;
+  position: fixed;
+  top: 0px;
+  background-color: white;
 }
 
 #nav__container1 {
@@ -40,7 +44,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 220px;
+  width: 320px;
   -webkit-box-pack: right;
       -ms-flex-pack: right;
           justify-content: right;
@@ -55,6 +59,10 @@
 
 #nav__container1 #nav__container1__content #nav__container1__content__account .nav__container1__content__account_container_1 {
   padding-right: 30px;
+}
+
+#nav__container1 #nav__container1__content #nav__container1__content__account .nav__container1__content__account_container_2 {
+  padding-right: 10px;
 }
 
 #nav__container1 #nav__container1__content #nav__container1__content__account #nav__container1__content__account_container_1_id {
@@ -92,13 +100,84 @@
   position: relative;
 }
 
+#nav__container2 #nav__container2__row2Nav li Link {
+  color: black;
+}
+
 #nav__container2 #nav__container2__row2Nav li .Link:hover {
+  cursor: pointer;
   color: #0E4CFF;
 }
 
 #nav__container2 #nav__container2__row2Nav li .Link {
   text-decoration: none;
   padding: 5px 8px 5px 8px;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link .nav__container2__row2Nav__school {
+  position: absolute;
+  height: auto;
+  width: 230px;
+  padding: 10px;
+  top: 25px;
+  left: 0px;
+  z-index: 10;
+  list-style: none;
+  background-color: #0139DD;
+  color: white;
+  display: none;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link .nav__container2__row2Nav__school li:hover {
+  color: black;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link .nav__container2__row2Nav__school li .checkSchool {
+  cursor: pointer;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link .nav__container2__row2Nav__league {
+  position: absolute;
+  height: auto;
+  width: 200px;
+  padding: 10px;
+  top: 25px;
+  left: 0px;
+  z-index: 10;
+  list-style: none;
+  background-color: #0139DD;
+  color: white;
+  display: none;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link .nav__container2__row2Nav__league li:hover {
+  color: black;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link .nav__container2__row2Nav__league li .checkSchool {
+  cursor: pointer;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link .nav__container2__row2Nav__school::before {
+  content: " ";
+  position: absolute;
+  top: -3px;
+  width: 20px;
+  height: 20px;
+  background-color: #0139DD;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link .nav__container2__row2Nav__league::before {
+  content: " ";
+  position: absolute;
+  top: -3px;
+  width: 20px;
+  height: 20px;
+  background-color: #0139DD;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
 }
 
 #nav__container2 #nav__container2__row2Nav li .Link span {
@@ -110,13 +189,21 @@
   bottom: 0px;
   left: 0;
   right: 0;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 #nav__container2 #nav__container2__row2Nav li .Link .active {
-  height: 4px;
+  height: 3px;
   width: 100%;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link1:hover .nav__container2__row2Nav__school {
+  display: block;
+}
+
+#nav__container2 #nav__container2__row2Nav li .Link2:hover .nav__container2__row2Nav__league {
+  display: block;
 }
 
 #nav__container2 #nav__container2__row2Nav li:hover .Link span {
@@ -152,9 +239,7 @@
     width: 130px;
   }
   #nav__container2 {
-    overflow-x: scroll;
     width: 100%;
-    overflow-y: hidden;
   }
   #nav__container2 #nav__container2__row2Nav {
     width: 100%;
@@ -168,10 +253,22 @@
   }
 }
 
+@media (max-width: 637px) {
+  .nav__container1__content__account_container_2 {
+    display: none;
+  }
+}
+
+@media (max-width: 445px) {
+  #nav__container1 #nav__container1__content #nav__container1__content__account {
+    min-width: 225px;
+  }
+}
+
 @media (max-width: 420px) {
   #nav__container1 #nav__container1__content #nav__container1__content__account .nav__container1__content__account_container {
     border-left: 1px solid black;
-    padding-left: 10px;
+    padding-left: 13px;
     padding-right: 25px;
     height: 25px;
   }
@@ -182,6 +279,9 @@
   #nav__container1 #nav__container1__content #nav__container1__content__account .nav__container1__content__account_container_1 {
     padding-right: 100px;
     width: 190px;
+  }
+  #nav__container1 #nav__container1__content #nav__container1__content__account .nav__container1__content__account_container_3 {
+    padding-right: 5px;
   }
 }
 /*# sourceMappingURL=homeNav.css.map */

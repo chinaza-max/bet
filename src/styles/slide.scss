@@ -8,6 +8,7 @@ $minWidth:310px;
     overflow: hidden;
     position: relative;
     min-width:$minWidth ;
+    z-index: -1;
     .slideConatiner__left:hover{
         cursor: pointer;
         color: $navBackground;
@@ -81,7 +82,7 @@ $minWidth:310px;
         }
     }
 }
-@media (max-width:320px) {
+@media (max-width:330px) {
     .slideConatiner{
         .slideConatiner__containerDOT{
             bottom :10%;

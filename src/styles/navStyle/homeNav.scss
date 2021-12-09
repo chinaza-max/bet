@@ -2,14 +2,50 @@ $navBackground:#0139DD;
 $navbackgroundFade:#0E4CFF;
 $minWidth:310px;
 
+
+
+@mixin dropDown($width) {
+    position: absolute;
+    height: auto;
+    width: $width;
+    padding: 10px;
+    top: 25px;
+    left: 0px;
+    z-index: 10;
+    list-style: none;
+    background-color: $navBackground;
+    color: white;
+    display: none;
+    li:hover{
+        color: black;
+        
+    }
+    li .checkSchool{
+        cursor: pointer;
+    }
+}
+
+@mixin point() {
+    content: " ";
+    position: absolute;
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    background-color: #0139DD;
+    transform: rotate(40deg);
+}
 #nav{
-    width: 100%;
+    width: 100vw;
     min-width:$minWidth;
+    border-bottom: 1px solid $navBackground;
+    position: fixed;
+    top: 0px;
+    background-color: white;
 }
 #nav__container1{
     padding-top: 10px;
     background-color:$navBackground;
-    #nav__container1__content{
+    #nav__container1__content{ 
         width: 90%;
         margin: 0 auto;
         display: flex;
@@ -26,7 +62,7 @@ $minWidth:310px;
                 list-style: none;
                 display: flex;
                 flex-direction: row;
-                width: 220px;
+                width: 320px;
                 justify-content: right; 
             .nav__container1__content__account_container{
                 border-left: 1px solid black;
@@ -36,6 +72,9 @@ $minWidth:310px;
             }
             .nav__container1__content__account_container_1{
                 padding-right: 30px;
+            }
+            .nav__container1__content__account_container_2{
+                padding-right: 10px;
             }
             #nav__container1__content__account_container_1_id{
                 position: relative;
@@ -64,12 +103,28 @@ $minWidth:310px;
             padding: 0;
             position: relative;
         }
+        li Link{
+            color: black;
+        }
         li .Link:hover{
+            cursor: pointer;
             color:$navbackgroundFade;
         }
         li .Link{
             text-decoration: none;
-            padding: 5px 8px 5px 8px;
+            padding: 5px 8px 5px 8px;     
+            .nav__container2__row2Nav__school{
+                @include dropDown(230px);
+            }
+            .nav__container2__row2Nav__league{
+                @include dropDown(200px);
+            }
+            .nav__container2__row2Nav__school::before{
+                @include point
+            }
+            .nav__container2__row2Nav__league::before{
+                @include point
+            }
             span{
                 position: absolute;
                 width: 0;
@@ -78,20 +133,25 @@ $minWidth:310px;
                 bottom: 0px;
                 left: 0;
                 right: 0;
-                border-top-left-radius: 12px;
-                border-top-right-radius: 12px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
             }
             .active{
-                height: 4px;
+                height: 3px;
                 width: 100%;
             }
+        }
+        li .Link1:hover .nav__container2__row2Nav__school{
+            display:block;
+        }
+        li .Link2:hover .nav__container2__row2Nav__league{
+            display:block;
         }
         li:hover .Link span{
             height: 4px;
             width: 100%;
             background-color:$navbackgroundFade ;
         }
-        
     }
 }
 @media(max-width:1024px) {
@@ -120,9 +180,8 @@ $minWidth:310px;
         }
     }
     #nav__container2{
-        overflow-x: scroll;
         width: 100%;
-        overflow-y: hidden;
+        
         #nav__container2__row2Nav{
             width: 100%;
             min-width: $minWidth;
@@ -135,14 +194,27 @@ $minWidth:310px;
         }
     }
 }
-
+@media(max-width:637px) {
+    .nav__container1__content__account_container_2{
+      display: none;
+    }
+}
+@media(max-width:445px) {
+    #nav__container1{
+        #nav__container1__content{ 
+            #nav__container1__content__account{
+                min-width: 225px;
+            }
+        }
+    }
+}
 @media(max-width:420px) {
     #nav__container1{
         #nav__container1__content{
             #nav__container1__content__account{
                 .nav__container1__content__account_container{
                     border-left: 1px solid black;
-                    padding-left: 10px;
+                    padding-left: 13px;
                     padding-right: 25px;
                     height: 25px;
                 }
@@ -154,7 +226,9 @@ $minWidth:310px;
                     padding-right: 100px;
                     width: 190px;
                 }
-
+                .nav__container1__content__account_container_3{
+                    padding-right: 5px;
+                }
             }
         }
     }

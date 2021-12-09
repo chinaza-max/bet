@@ -9,4 +9,4 @@ const SliderData={
         image3
     }
 
-export  default  SliderData
+export default  SliderData

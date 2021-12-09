@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
   min-width: 310px;
+  z-index: -1;
 }
 
 .slideConatiner .slideConatiner__left:hover {
@@ -95,7 +96,7 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 330px) {
   .slideConatiner .slideConatiner__containerDOT {
     bottom: 10%;
   }
