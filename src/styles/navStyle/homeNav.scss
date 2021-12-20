@@ -233,3 +233,73 @@ $minWidth:310px;
         }
     }
 }
+
+/*
+
+const puppeteer=require('puppeteer');
+
+
+class user{
+    constructor(){
+        this.arr=''
+        this.checkForOk_button=false;
+        this.regNo='';
+        this.count=0;
+    }
+
+    async getHostel(url,regNo,RRR,arr){
+        this.arr=arr;
+            try{
+               const browser = await puppeteer.launch({headless:false});
+               const page = await browser.newPage();
+              
+              await page.goto(url,{waitUntil:'networkidle2', timeout: 0}).then(()=>{console.log('success')});
+             // const urlEndPoint=browser.wsEndpoint()
+              await page.waitForSelector('#inputUsername');
+              console.log("regNo");
+              console.log( regNo);
+              console.log("regNo");
+              await page.$eval('#inputUsername',(el,regNo) => {el.value =regNo},regNo);
+              await page.$eval('#txtRRR', (el,RRR) => {el.value =RRR},RRR);
+              //const navigationPromise = page.waitForNavigation({ waitUntil: 'networkidle0' , timeout: 0})
+              await page.click('#login')
+             // await navigationPromise;
+             tryer()
+           async  function tryer(){
+                if(this.count<arr.length){
+                    await page.waitForSelector(`#DataList1_btnOption_${this.arr[this.count]}`,{ timeout: 0});
+                    await page.click(`#DataList1_btnOption_${this.arr[this.count]}`);
+                    this.count++;
+                }
+                else{
+                    this.count=0;
+                }
+                page.once('dialog', async dialog => {  
+                try{
+                  if(dialog.message().includes("There is no")){
+                    dialog.accept();
+                    //tryer()  
+                  }
+                }
+                catch(e){
+                  console.log(e)
+                }
+                 
+                });
+             }   
+              }catch(e){
+                console.log(e)
+              }
+          
+        
+    }
+}
+module.exports=user
+const users =require("./users")
+const user= new users()
+
+let hostel=[9,5,6]
+user.getHostel('https://unnportal.unn.edu.ng/HostelLanding.aspx',"2017/242979",150523916393,hostel)
+
+
+*/
