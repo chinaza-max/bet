@@ -91,7 +91,6 @@ function HomeNav(){
                         <li id="nav__container1__content__account">
                                  <div className="nav__container1__content__account_container nav__container1__content__account_container_1" id="nav__container1__content__account_container_1_id"><Link to="#" className="Link"><MoneyHolder/></Link></div>
                             <div className="nav__container1__content__account_container nav__container1__content__account_container_2" ><Link to="#" className="Link">Deposit</Link></div>
-                            <div className="nav__container1__content__account_container nav__container1__content__account_container_3" ><Link to="#" className="Link">Logout</Link></div>
                         </li>
                         :
                         <li id="nav__container1__content__account">
@@ -118,8 +117,7 @@ function HomeNav(){
                     
                     <li>
                         <span  className="Link Link2">
-                                League
-                             
+                                sport
                             <ul className="nav__container2__row2Nav__league">
                                 {leagues}
                             </ul>
@@ -127,7 +125,7 @@ function HomeNav(){
                         </span>
                     </li>
                     <li><Link to="#" onClick={()=>selectedNav(3)} className="Link">LiveScore <span className="span"></span></Link></li>
-                    <li><Link to="#" onClick={()=>selectedNav(4)} className="Link">Blog <span className="span"></span></Link></li>
+                    <li><Link to="#" onClick={()=>selectedNav(4)} className="Link">p2p <span className="span"></span></Link></li>
                     <li><Link to="#" onClick={()=>selectedNav(5)} className="Link">Fixture <span className="span"></span></Link></li>
                     <li><Link to="#" onClick={()=>selectedNav(6)} className="Link">Profile <span className="span"></span></Link></li>
                 </ul>

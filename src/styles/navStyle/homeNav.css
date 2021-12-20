@@ -5,6 +5,7 @@
   position: fixed;
   top: 0px;
   background-color: white;
+  z-index: 2;
 }
 
 #nav__container1 {
@@ -121,9 +122,8 @@
   padding: 10px;
   top: 25px;
   left: 0px;
-  z-index: 10;
   list-style: none;
-  background-color: #0139DD;
+  background-color: #0E4CFF;
   color: white;
   display: none;
 }
@@ -143,9 +143,8 @@
   padding: 10px;
   top: 25px;
   left: 0px;
-  z-index: 10;
   list-style: none;
-  background-color: #0139DD;
+  background-color: #0E4CFF;
   color: white;
   display: none;
 }
@@ -164,7 +163,7 @@
   top: -3px;
   width: 20px;
   height: 20px;
-  background-color: #0139DD;
+  background-color: #0E4CFF;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
 }
@@ -175,7 +174,7 @@
   top: -3px;
   width: 20px;
   height: 20px;
-  background-color: #0139DD;
+  background-color: #0E4CFF;
   -webkit-transform: rotate(40deg);
           transform: rotate(40deg);
 }

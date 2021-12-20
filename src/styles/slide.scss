@@ -8,7 +8,7 @@ $minWidth:310px;
     overflow: hidden;
     position: relative;
     min-width:$minWidth ;
-    z-index: -1;
+    z-index: 1;
     .slideConatiner__left:hover{
         cursor: pointer;
         color: $navBackground;
